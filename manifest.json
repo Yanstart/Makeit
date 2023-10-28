@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "Make It Green",
+    "version": "1.0",
+    "permissions": ["activeTab"],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["main.js"]
+      }
+    ],
+    "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html",
+      "default_title": "Make It Green"
+    }
+  }
