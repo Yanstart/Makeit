@@ -76,7 +76,7 @@ We welcome contributions from the community to help us improve the GreenScore Br
 
 ## License
 
-The GreenScore Browser Extension is open-source software released under the [License propriétaire](https://fr.wikipedia.org/wiki/Licence_propri%C3%A9taire). You are free to use, modify, and distribute the software in accordance with the terms of this license.
+The GreenScore Browser Extension is open-source software released under the [Owner License](https://fr.wikipedia.org/wiki/Licence_propri%C3%A9taire). You are free to use, modify, and distribute the software in accordance with the terms of this license.
 
 ---
 
