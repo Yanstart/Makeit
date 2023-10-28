@@ -76,8 +76,8 @@ We welcome contributions from the community to help us improve the GreenScore Br
 
 ## License
 
-The GreenScore Browser Extension is open-source software released under the [Owner License](https://fr.wikipedia.org/wiki/Licence_propri%C3%A9taire). You are free to use, modify, and distribute the software in accordance with the terms of this license.
+The MakeItGreen Browser Extension is open-source software released under the [Owner License](https://fr.wikipedia.org/wiki/Licence_propri%C3%A9taire). You are free to use, modify, and distribute the software in accordance with the terms of this license.
 
 ---
 
-Thank you for checking out our project! We hope the GreenScore Browser Extension contributes to a more sustainable and accessible internet. If you have any questions or suggestions, please feel free to reach out to our team.
+Thank you for checking out our project! We hope the MakeItGreen Browser Extension contributes to a more sustainable and accessible internet. If you have any questions or suggestions, please feel free to reach out to our team.
