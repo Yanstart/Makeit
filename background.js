@@ -1,10 +1,13 @@
-// Écouter les messages envoyés par le script de contenu
+let performanceData;
+
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-    // Afficher les données dans la console (à des fins de débogage)
-    console.log("Données de performance reçues :", request.performanceData);
-  
-    // Traiter les données ici (vous pouvez les envoyer à un serveur, les stocker, etc.)
-  
-    // Réponse facultative au script de contenu
+  if (request.requestPerformanceData) {
+    // Répondre au popup avec les données de performance
+    sendResponse({ received: true, performanceData });
+  } else {
+    // Traiter les autres messages comme précédemment
+    performanceData = request.performanceData;
+    console.log("Données de performance reçues :", performanceData);
     sendResponse({ received: true });
-  });
+  }
+});
