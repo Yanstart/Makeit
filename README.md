@@ -62,7 +62,7 @@ We welcome contributions from the community to help us improve the GreenScore Br
 
 3. Make your changes and commit them:
    ```
-   git commit -m "Add your commit message [here](https://github.com/Yanstart/MakeitGreen/pull/1)"
+   git commit -m "Add your commit message ![here](https://github.com/Yanstart/MakeitGreen/pull/1)"
    ```
 
 4. Push your changes to your forked repository:
