@@ -1,20 +1,25 @@
 {
     "manifest_version": 3,
-    "name": "Make It Green",
-    "version": "1.0",
-    "permissions": ["activeTab"],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["main.js"]
-      }
-    ],
+    "name": "MakeItGreen!",
+    "description" : "Voici une extension qui permet de vérifier la data score",
+    "version": "1.0.1",
+
     "action": {
-      "default_icon": "icon.png",
-      "default_popup": "popup.html",
-      "default_title": "Make It Green"
-    }
-  }
+        "default_icon" : "iconA.png",
+        "default_title": "MakeItGreen Now !",   
+        "default_popup": "index.html" 
+    },
+    
+    "web_accessible_resources": [
+        {
+            "resources": ["script.js", "style.css"],
+            "matches": ["<all_urls>"]
+        }
+    ],
+
+    "permissions": [
+        "activeTab",
+        "storage"
+    ]
+
+}  
