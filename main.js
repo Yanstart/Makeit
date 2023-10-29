@@ -7,12 +7,6 @@ function collectPerformanceData() {
     const navigationStart = navigationTiming.navigationStart;
     const loadEventEnd = navigationTiming.domContentLoadedEventEnd;
     const loadTime = loadEventEnd - navigationStart;
-    const domReadyTime = navigationTiming.domContentLoadedEventEnd - navigationTiming.navigationStart;
-    const redirectTime = navigationTiming.redirectEnd - navigationTiming.redirectStart;
-    const appCacheTime = navigationTiming.domainLookupStart - navigationTiming.fetchStart;
-    const dnsLookupTime = navigationTiming.domainLookupEnd - navigationTiming.domainLookupStart;
-    const tcpTime = navigationTiming.connectEnd - navigationTiming.connectStart;
-    const requestTime = navigationTiming.responseStart - navigationTiming.requestStart;
     const responseTime = navigationTiming.responseEnd - navigationTiming.responseStart;
 
     // On reprend une taille approximative en octets des éléments de la page
@@ -22,18 +16,24 @@ function collectPerformanceData() {
         totalSize += resource.encodedBodySize;
         console.log(`Type: ${resource.initiatorType}, Taille: ${resource.encodedBodySize} octets`);
     });
+
+    // Calcul d'un DataScore
+
+    const thresholds = {
+        low: 500,  // Seuil bas
+        medium: 1000,  // Seuil moyen
+        high: 2000  // Seuil élevé
+      };
+
+    const proportion = (((totalSize - thresholds.low) / (thresholds.high - thresholds.low))).toFixed(0);
+    console.log(proportion);
   
     // Objet reprenant les données de performance
     const performanceData = {
       loadTime,
-      domReadyTime,
-      redirectTime,
-      appCacheTime,
-      dnsLookupTime,
-      tcpTime,
-      requestTime,
       responseTime,
-      totalSize
+      totalSize,
+      proportion
     };
 
     //console.log("Taille totale des ressources téléchargées :", totalSize, "octets");

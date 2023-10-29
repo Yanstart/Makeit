@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const loadTimeElement = document.getElementById('loadTime');
     const responseTimeElement = document.getElementById('reponseTime');
     const pageWeightElement = document.getElementById('totalSize');
+    const dataScore = document.getElementById('dataScore');
   
     // Envoyer une demande au script de fond pour obtenir les données de performance
     chrome.runtime.sendMessage({ requestPerformanceData: true }, function (response) {
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         loadTimeElement.textContent = 'Load Time: ' + response.performanceData.loadTime + ' ms';
         responseTimeElement.textContent = 'Response Time: ' + response.performanceData.responseTime + ' ms';
         pageWeightElement.textContent = 'Page Weight: ' + formatSize(response.performanceData.totalSize);
+        dataScore.textContent = 'DATA SCORE: ' + response.performanceData.proportion + ' Pts';
       } else {
         loadTimeElement.textContent = 'Données de performance non disponibles';
         responseTimeElement.textContent = '';
